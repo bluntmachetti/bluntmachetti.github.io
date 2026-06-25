@@ -6,10 +6,11 @@ Personal site and writing hub for Kehinde (Kenny) Ademolu.
 
 ## Structure
 
-- `/` — Personal landing page
+- `/` — Personal landing page (hero, current focus, latest essay, builds, connect)
 - `/writing/` — Essays and personal build reflections
-- `/builds/` — Index of active projects and laboratories
-- `/about/` — Professional bio and links
+
+The top-nav **Builds** link scrolls to the builds section on the homepage (`/#builds`);
+**About** links out to the GitHub profile.
 
 ## Project blogs (separate repos)
 

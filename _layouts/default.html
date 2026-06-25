@@ -27,9 +27,8 @@
   <div class="nav-spacer"></div>
   <nav class="nav-links">
     <a class="nav-link{% if page.url == '/writing/' %} active{% endif %}" href="{{ '/writing/' | relative_url }}">Writing</a>
-    <a class="nav-link{% if page.url == '/builds/' %} active{% endif %}" href="{{ '/builds/' | relative_url }}">Builds</a>
-    <a class="nav-link{% if page.url == '/about/' %} active{% endif %}" href="{{ '/about/' | relative_url }}">About</a>
-    <a class="nav-link" href="{{ site.links.github }}" target="_blank" rel="noopener">GitHub <span class="ext">↗</span></a>
+    <a class="nav-link" href="{{ '/' | relative_url }}#builds">Builds</a>
+    <a class="nav-link" href="{{ site.links.github }}" target="_blank" rel="noopener">About <span class="ext">↗</span></a>
   </nav>
   {% if page.layout == 'post' %}<div class="nav-progress" id="progress"></div>{% endif %}
 </header>

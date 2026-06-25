@@ -159,8 +159,6 @@ a { color: var(--info); text-decoration: none; }
 }
 .feat-head h2 { font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--t-hi); font-weight: 600; margin: 0; }
 .feat-head .rule { flex: 1; height: 1px; background: var(--line-soft); }
-.feat-head .see-all { text-decoration: none; flex: none; }
-.feat-head .see-all:hover { color: var(--info); }
 
 .feat-card {
   display: block; padding: clamp(26px, 3.5vw, 38px) 16px;
@@ -188,7 +186,7 @@ a { color: var(--info); text-decoration: none; }
 /* ============================================================================
    BUILDS GRID
    ============================================================================ */
-.builds-section { padding-bottom: clamp(48px, 7vw, 80px); }
+.builds-section { padding-bottom: clamp(48px, 7vw, 80px); scroll-margin-top: 72px; }
 
 .build-grid {
   display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;
