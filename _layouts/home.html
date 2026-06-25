@@ -38,25 +38,6 @@ layout: default
     </ul>
   </section>
 </div>
-    <div class="hero-cta" style="margin-top: 2em;">
-      <a class="btn solid" href="{{ '/writing/i-learn-by-building/' | relative_url }}">Start here: I Learn by Building →</a>
-    </div>
-  </section>
-</div>
-
-<div class="wrap">
-  <section class="focus-section" style="padding: 2em 0 3em;">
-    <div class="feat-head">
-      <h2>Current focus</h2>
-      <span class="rule"></span>
-    </div>
-    <ul style="list-style: none; padding: 0; margin: 1em 0 0;">
-      <li style="padding: 0.5em 0; color: var(--t-body);">Deterministic simulation for AI-native decision systems</li>
-      <li style="padding: 0.5em 0; color: var(--t-body);">Incident response readiness and cyber resilience</li>
-      <li style="padding: 0.5em 0; color: var(--t-body);">Multi-agent coordination under real-world constraints</li>
-    </ul>
-  </section>
-</div>
 
 {% assign essays = site.posts | where: "category", "writing" %}
 {% if essays.size > 0 %}
