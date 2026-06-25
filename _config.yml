@@ -1,0 +1,21 @@
+title: "Kehinde Ademolu"
+description: >-
+  I build AI-native systems for resilience, security, and decision-making —
+  from incident response simulators to agentic economy labs and enterprise digital twins.
+future: true
+url: "https://bluntmachetti.github.io"
+baseurl: ""
+author:
+  name: "Kenny Ademolu"
+links:
+  github: "https://github.com/bluntmachetti"
+  linkedin: "https://www.linkedin.com/in/kehindeademolu"
+  x: "https://x.com/kehindeademolu"
+  redoubt: "https://redoubtlabs.io"
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

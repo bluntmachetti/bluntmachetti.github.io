@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+{% seo %}
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}" />
+{% feed_meta %}
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="{{ '/' | relative_url }}">
+    <svg class="brand-mark" viewBox="0 0 24 24" fill="none">
+      <circle cx="12" cy="12" r="10" stroke="#46b6f0" stroke-width="1.4" opacity="0.45" />
+      <circle cx="12" cy="12" r="5" stroke="#46b6f0" stroke-width="1.4" />
+      <circle cx="12" cy="12" r="1.7" fill="#46b6f0" />
+    </svg>
+    <span class="brand-text">
+      <span class="brand-name">KEHINDE ADEMOLU</span>
+      <span class="brand-tag">BUILDER · ARCHITECT · AI SYSTEMS</span>
+    </span>
+  </a>
+  <div class="nav-spacer"></div>
+  <nav class="nav-links">
+    <a class="nav-link{% if page.url == '/writing/' %} active{% endif %}" href="{{ '/writing/' | relative_url }}">Writing</a>
+    <a class="nav-link{% if page.url == '/builds/' %} active{% endif %}" href="{{ '/builds/' | relative_url }}">Builds</a>
+    <a class="nav-link{% if page.url == '/about/' %} active{% endif %}" href="{{ '/about/' | relative_url }}">About</a>
+    <a class="nav-link" href="{{ site.links.github }}" target="_blank" rel="noopener">GitHub <span class="ext">↗</span></a>
+  </nav>
+  {% if page.layout == 'post' %}<div class="nav-progress" id="progress"></div>{% endif %}
+</header>
+
+<main>
+  {{ content }}
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <svg class="brand-mark" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="10" stroke="#46b6f0" stroke-width="1.4" opacity="0.45" />
+            <circle cx="12" cy="12" r="5" stroke="#46b6f0" stroke-width="1.4" />
+            <circle cx="12" cy="12" r="1.7" fill="#46b6f0" />
+          </svg>
+          <span class="foot-name">KEHINDE ADEMOLU</span>
+        </div>
+        <p class="foot-desc">Building AI-native systems for resilience, security, and decision-making. Enterprise AI engineering and platform leadership.</p>
+      </div>
+      <div class="foot-right">
+        <div class="foot-row"><span class="foot-label">GitHub</span><span class="foot-val"><a href="{{ site.links.github }}" target="_blank" rel="noopener">bluntmachetti ↗</a></span></div>
+        <div class="foot-row"><span class="foot-label">LinkedIn</span><span class="foot-val"><a href="{{ site.links.linkedin }}" target="_blank" rel="noopener">kehindeademolu ↗</a></span></div>
+        <div class="foot-row"><span class="foot-label">X</span><span class="foot-val"><a href="{{ site.links.x }}" target="_blank" rel="noopener">@kehindeademolu ↗</a></span></div>
+        <div class="foot-row"><span class="foot-label">Lab</span><span class="foot-val"><a href="{{ site.links.redoubt }}" target="_blank" rel="noopener">redoubtlabs.io ↗</a></span></div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span class="micro">© {{ 'now' | date: '%Y' }} Kehinde Ademolu</span>
+      <span class="micro">Powered by GitHub Pages · Jekyll</span>
+    </div>
+  </div>
+</footer>
+
+{% if page.layout == 'post' %}
+<script>
+  (function () {
+    var bar = document.getElementById('progress');
+    if (!bar) return;
+    function update() {
+      var h = document.documentElement;
+      var max = h.scrollHeight - h.clientHeight;
+      var p = max > 0 ? (h.scrollTop || document.body.scrollTop) / max : 0;
+      bar.style.width = (p * 100) + '%';
+    }
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  })();
+</script>
+{% endif %}
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+---
+layout: default
+---
+<div class="wrap">
+  <section class="hero">
+    <div class="hero-kicker">
+      <span class="rule"></span>
+      <span class="hero-status"><span class="dot"></span>Active · building</span>
+    </div>
+    <h1>I build AI-native systems for <span class="accent">resilience, security, and decision-making</span></h1>
+    <p class="hero-lead">
+      My work sits at the intersection of cyber architecture, simulation, incident response,
+      and agentic AI. I use small, public builds as laboratories for bigger questions: how do we
+      test AI systems, score decisions, simulate organisations, and make resilience measurable?
+    </p>
+    <div class="hero-meta">
+      <span class="tagchip"><span class="sw" style="background:#46b6f0"></span>AI Systems</span>
+      <span class="tagchip"><span class="sw" style="background:#34d399"></span>Cyber Resilience</span>
+      <span class="tagchip"><span class="sw" style="background:#f6a723"></span>Simulation</span>
+      <span class="tagchip"><span class="sw" style="background:#a78bfa"></span>Platform Engineering</span>
+    </div>
+  </section>
+</div>
+
+{% assign essays = site.posts | where: "category", "writing" %}
+{% if essays.size > 0 %}
+<div class="wrap">
+  <section class="featured">
+    <div class="feat-head">
+      <h2>Latest essay</h2>
+      <span class="rule"></span>
+    </div>
+    {% assign latest = essays | first %}
+    <a class="feat-card" href="{{ latest.url | relative_url }}">
+      <span class="feat-label">ESSAY</span>
+      <h3 class="feat-title">{{ latest.title }}</h3>
+      <p class="feat-excerpt">{{ latest.summary | default: latest.description }}</p>
+      <span class="entry-more">Read essay <span class="arr">→</span></span>
+    </a>
+  </section>
+</div>
+{% endif %}
+
+<div class="wrap">
+  <section class="builds-section">
+    <div class="feat-head">
+      <h2>Active builds</h2>
+      <span class="rule"></span>
+      <a class="micro see-all" href="{{ '/builds/' | relative_url }}">See all →</a>
+    </div>
+    <div class="build-grid">
+      <a class="build-card" href="https://bluntmachetti.github.io/aftershock" target="_blank" rel="noopener">
+        <div class="build-head-row">
+          <span class="build-name">Aftershock</span>
+          <span class="flag ok">LIVE</span>
+        </div>
+        <p class="build-desc">Society-scale disaster response simulation and multi-agent benchmark lab. Six small models out-deliver one big one at ~65% better lives-per-dollar.</p>
+        <span class="build-url">bluntmachetti.github.io/aftershock ↗</span>
+      </a>
+      <a class="build-card" href="https://bluntmachetti.github.io/incidentgym" target="_blank" rel="noopener">
+        <div class="build-head-row">
+          <span class="build-name">IncidentGym</span>
+          <span class="flag ok">LIVE</span>
+        </div>
+        <p class="build-desc">Incident-response training gym with deterministic scoring and auditable replay. Rehearse cyber incidents and measure readiness.</p>
+        <span class="build-url">bluntmachetti.github.io/incidentgym ↗</span>
+      </a>
+      <a class="build-card" href="https://blog.redoubtlabs.dev/arena" target="_blank" rel="noopener">
+        <div class="build-head-row">
+          <span class="build-name">Arena</span>
+          <span class="flag warn">ACTIVE</span>
+        </div>
+        <p class="build-desc">Agentic organisation and economy simulation experiments. What happens when AI agents make decisions at scale?</p>
+        <span class="build-url">blog.redoubtlabs.dev/arena ↗</span>
+      </a>
+      <a class="build-card build-card-dim" href="{{ '/builds/' | relative_url }}">
+        <div class="build-head-row">
+          <span class="build-name">EADS</span>
+          <span class="flag">PRIVATE</span>
+        </div>
+        <p class="build-desc">Enterprise decision simulation and operational resilience modelling. Selected private work — coming soon.</p>
+        <span class="build-url">More on /builds →</span>
+      </a>
+    </div>
+  </section>
+</div>
+
+<div class="wrap">
+  <section class="connect-section">
+    <div class="feat-head">
+      <h2>Connect</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="connect-grid">
+      <a class="connect-item" href="{{ site.links.github }}" target="_blank" rel="noopener">
+        <span class="connect-label">GitHub</span>
+        <span class="connect-val">bluntmachetti ↗</span>
+      </a>
+      <a class="connect-item" href="{{ site.links.linkedin }}" target="_blank" rel="noopener">
+        <span class="connect-label">LinkedIn</span>
+        <span class="connect-val">kehindeademolu ↗</span>
+      </a>
+      <a class="connect-item" href="{{ site.links.x }}" target="_blank" rel="noopener">
+        <span class="connect-label">X</span>
+        <span class="connect-val">@bluntmachetti ↗</span>
+      </a>
+      <a class="connect-item" href="{{ site.links.redoubt }}" target="_blank" rel="noopener">
+        <span class="connect-label">Redoubt Labs</span>
+        <span class="connect-val">redoubtlabs.dev ↗</span>
+      </a>
+    </div>
+  </section>
+</div>
