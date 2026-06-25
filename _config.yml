@@ -17,5 +17,6 @@ plugins:
   - jekyll-seo-tag
 exclude:
   - README.md
+  - CLAUDE.md
   - Gemfile
   - Gemfile.lock
