@@ -37,7 +37,7 @@ Every project shares a core architecture:
 - **Multi-agent coordination** under constraints that mirror real organisational pressure
 - **Evidence-first reporting** that distinguishes what worked from what merely looked good
 
-These are not toys. They are laboratories. Each build tests a hypothesis about how AI systems behave under stress, and the results — positive and negative — feed back into the next design.
+These are small laboratories by design: constrained enough to build quickly, rigorous enough to test whether the underlying idea survives contact with reality.
 
 ## Why public
 
